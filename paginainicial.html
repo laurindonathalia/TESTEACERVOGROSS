@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#000000",
+              "background-light": "#ffffff",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply bg-white text-black;
+            }
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-6 lg:px-20 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[1400px] flex-1">
+<header class="flex flex-wrap items-center justify-between gap-2 border-b border-black px-4 py-3 mb-8">
+<div class="flex items-center gap-3 text-black">
+<div class="flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl md:text-3xl">account_balance</span>
+</div>
+<h2 class="text-base md:text-lg font-bold leading-tight tracking-widest uppercase">Acervo Gross - Centenário</h2>
+</div>
+<div class="flex flex-1 flex-wrap justify-end gap-2 items-center">
+<nav class="hidden md:flex items-center gap-10">
+<a aria-current="page" class="text-black text-xs font-bold tracking-widest uppercase opacity-60 pointer-events-none" href="paginainicial.html">Página Inicial</a>
+</nav>
+<a href="registro.html" class="flex w-full md:w-auto md:min-w-[160px] items-center justify-center border border-black h-10 px-5 bg-black text-white text-xs font-bold tracking-widest uppercase transition-all hover:bg-white hover:text-black">
+<span class="truncate">+ Cadastrar Nova Obra</span>
+</a>
+</div>
+</header>
+<div class="flex flex-col gap-3 px-4 mb-8">
+<div class="flex flex-col gap-2">
+<h1 class="text-black text-3xl md:text-4xl font-light leading-tight tracking-tighter uppercase">Galeria do Acervo Gross</h1>
+<p class="text-black/60 text-xs md:text-sm font-normal max-w-2xl uppercase tracking-widest">Documentação técnica e preservação do patrimônio institucional.</p>
+</div>
+</div>
+<div class="px-4 py-3 mb-10">
+<label class="flex flex-col w-full">
+<div class="flex w-full items-stretch h-12 bg-white border border-black focus-within:ring-1 focus-within:ring-black transition-all">
+<div class="text-black flex items-center justify-center pl-3">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-transparent focus:ring-0 text-black placeholder:text-black/30 px-4 text-sm md:text-base font-normal" placeholder="Filtrar por título, técnica ou código..." value=""/>
+</div>
+</label>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10 md:gap-x-12 md:gap-y-16 p-4">
+<a href="paginainterna.html?id=1" class="group flex flex-col gap-5 pb-8 border-b border-black/10">
+<div class="w-full aspect-[4/5] bg-neutral-100 overflow-hidden border border-black/5">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover transition-all duration-700 group-hover:scale-105" data-alt="Cartaz comemorativo dos 50 anos do Laboratório Gross" style='background-image: url("50ANOSGROSS.PNG");'></div>
+</div>
+<div class="flex flex-col gap-1">
+<p class="text-black/40 text-[10px] font-bold tracking-[0.2em] uppercase">Código: LG-INST-50AN-004</p>
+<p class="text-black text-xl font-bold leading-tight uppercase tracking-tight">Cartaz comemorativo dos 50 anos do Laboratório Gross</p>
+<p class="text-black/50 text-xs uppercase tracking-widest">Impressão gráfica em cartaz promocional</p>
+</div>
+</a>
+<a href="paginainterna.html?id=2" class="group flex flex-col gap-5 pb-8 border-b border-black/10">
+<div class="w-full aspect-[4/5] bg-neutral-100 overflow-hidden border border-black/5">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover transition-all duration-700 group-hover:scale-105" data-alt="Anúncio do medicamento Atroveran publicado na revista Vida Médica" style='background-image: url("ANUNCIOATROVERAN.PNG");'></div>
+</div>
+<div class="flex flex-col gap-1">
+<p class="text-black/40 text-[10px] font-bold tracking-[0.2em] uppercase">Código: LG-PUB-ATRO-006</p>
+<p class="text-black text-xl font-bold leading-tight uppercase tracking-tight">Anúncio do medicamento Atroveran publicado na revista Vida Médica</p>
+<p class="text-black/50 text-xs uppercase tracking-widest">Impressão gráfica editorial</p>
+</div>
+</a>
+<a href="paginainterna.html?id=3" class="group flex flex-col gap-5 pb-8 border-b border-black/10">
+<div class="w-full aspect-[4/5] bg-neutral-100 overflow-hidden border border-black/5">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover transition-all duration-700 group-hover:scale-105" data-alt="Anúncio publicitário do medicamento Atroveran" style='background-image: url("ATROVERAN.PNG");'></div>
+</div>
+<div class="flex flex-col gap-1">
+<p class="text-black/40 text-[10px] font-bold tracking-[0.2em] uppercase">Código: LG-PUB-ATRO-001</p>
+<p class="text-black text-xl font-bold leading-tight uppercase tracking-tight">Anúncio publicitário do medicamento Atroveran</p>
+<p class="text-black/50 text-xs uppercase tracking-widest">Impressão gráfica em revista médica</p>
+</div>
+</a>
+<a href="paginainterna.html?id=4" class="group flex flex-col gap-5 pb-8 border-b border-black/10">
+<div class="w-full aspect-[4/5] bg-neutral-100 overflow-hidden border border-black/5">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover transition-all duration-700 group-hover:scale-105" data-alt="Fotografia da sede dos Laboratórios Gross no Rio de Janeiro" style='background-image: url("FOTOGRAFIADOLABORATORIO.PNG");'></div>
+</div>
+<div class="flex flex-col gap-1">
+<p class="text-black/40 text-[10px] font-bold tracking-[0.2em] uppercase">Código: LG-FOT-SEDE-003</p>
+<p class="text-black text-xl font-bold leading-tight uppercase tracking-tight">Fotografia da sede dos Laboratórios Gross no Rio de Janeiro</p>
+<p class="text-black/50 text-xs uppercase tracking-widest">Fotografia em preto e branco</p>
+</div>
+</a>
+<a href="paginainterna.html?id=5" class="group flex flex-col gap-5 pb-8 border-b border-black/10">
+<div class="w-full aspect-[4/5] bg-neutral-100 overflow-hidden border border-black/5">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover transition-all duration-700 group-hover:scale-105" data-alt="Anúncio do medicamento Phosphargyrio" style='background-image: url("SYPHILIS.PNG");'></div>
+</div>
+<div class="flex flex-col gap-1">
+<p class="text-black/40 text-[10px] font-bold tracking-[0.2em] uppercase">Código: LG-PUB-PHOS-007</p>
+<p class="text-black text-xl font-bold leading-tight uppercase tracking-tight">Anúncio do medicamento Phosphargyrio</p>
+<p class="text-black/50 text-xs uppercase tracking-widest">Impressão gráfica publicitária</p>
+</div>
+</a>
+<a href="paginainterna.html?id=6" class="group flex flex-col gap-5 pb-8 border-b border-black/10">
+<div class="w-full aspect-[4/5] bg-neutral-100 overflow-hidden border border-black/5">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover transition-all duration-700 group-hover:scale-105" data-alt="Anúncio publicitário do medicamento Vagostesyl" style='background-image: url("VAGOSTESYL.PNG");'></div>
+</div>
+<div class="flex flex-col gap-1">
+<p class="text-black/40 text-[10px] font-bold tracking-[0.2em] uppercase">Código: LG-PUB-VAGO-002</p>
+<p class="text-black text-xl font-bold leading-tight uppercase tracking-tight">Anúncio publicitário do medicamento Vagostesyl</p>
+<p class="text-black/50 text-xs uppercase tracking-widest">Impressão gráfica publicitária</p>
+</div>
+</a>
+</div>
+<div class="flex items-center justify-center p-8 mt-12">
+<nav class="flex items-center gap-4">
+<a class="flex size-10 items-center justify-center text-black hover:opacity-50" href="#">
+<span class="material-symbols-outlined">chevron_left</span>
+</a>
+<a class="text-xs font-bold flex size-10 items-center justify-center border border-black bg-black text-white" href="#">1</a>
+<a class="text-xs font-bold flex size-10 items-center justify-center border border-transparent text-black hover:border-black" href="#">2</a>
+<a class="text-xs font-bold flex size-10 items-center justify-center border border-transparent text-black hover:border-black" href="#">3</a>
+<span class="text-black/30 flex size-10 items-center justify-center italic">...</span>
+<a class="text-xs font-bold flex size-10 items-center justify-center border border-transparent text-black hover:border-black" href="#">12</a>
+<a class="flex size-10 items-center justify-center text-black hover:opacity-50" href="#">
+<span class="material-symbols-outlined">chevron_right</span>
+</a>
+</nav>
+</div>
+<footer class="mt-12 py-12 border-t border-black text-center">
+<p class="text-black text-[10px] font-bold uppercase tracking-[0.4em]">acervo do laboratório GROSS 2026</p>
+</footer>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

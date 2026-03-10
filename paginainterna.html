@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>acervo_prancheta — Acervo Gross</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#000000",
+                        "background-light": "#ffffff",
+                        "background-dark": "#0a0a0a",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0rem", "lg": "0rem", "xl": "0rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col max-w-[1200px] mx-auto w-full">
+<header class="flex flex-wrap items-center justify-between gap-2 border-b border-black dark:border-white px-4 py-3">
+<div class="flex items-center gap-3 text-slate-900 dark:text-white">
+<div class="flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl md:text-3xl">account_balance</span>
+</div>
+<h2 class="text-base md:text-lg font-bold leading-tight tracking-widest uppercase">Acervo Gross - Centenário</h2>
+</div>
+<div class="flex items-center gap-2 md:hidden">
+<a href="paginainicial.html" class="text-slate-900 dark:text-slate-100 text-xs font-bold uppercase tracking-widest hover:opacity-80 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">arrow_back</span>
+<span>Galeria</span>
+</a>
+</div>
+<div class="flex flex-1 flex-wrap justify-end gap-2 items-center">
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-slate-900 dark:text-slate-100 text-xs font-bold tracking-widest uppercase hover:opacity-80" href="paginainicial.html">Página Inicial</a>
+</nav>
+<a href="registro.html" class="flex w-full md:w-auto md:min-w-[160px] items-center justify-center border border-black h-10 px-5 bg-black text-white text-xs font-bold tracking-widest uppercase transition-all hover:bg-white hover:text-black">
+<span class="truncate">+ Cadastrar Nova Obra</span>
+</a>
+</div>
+</header>
+<div class="px-6 py-3 border-b border-slate-100 dark:border-slate-900">
+<nav class="flex flex-wrap items-center gap-2 text-[10px] font-bold uppercase tracking-widest">
+<a class="text-slate-400 hover:text-slate-900 dark:hover:text-white" href="paginainicial.html">Acervo</a>
+<span class="text-slate-300">/</span>
+<span id="breadcrumbPage" class="text-slate-900 dark:text-white">Cartaz comemorativo dos 50 anos do Laboratório Gross</span>
+</nav>
+</div>
+<main class="flex-1 px-4 py-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-20">
+<div class="lg:col-span-7 flex flex-col gap-5">
+<div class="relative bg-slate-50 dark:bg-slate-900 aspect-[4/5] flex items-center justify-center border border-slate-200 dark:border-slate-800">
+<img id="itemImage" alt="Obra de arte do Acervo Gross" class="max-w-full max-h-full object-contain transition-all duration-700" src="acervo-07.png"/>
+<button class="absolute top-6 right-6 bg-white dark:bg-black p-3 border border-black dark:border-white hover:invert transition-all flex items-center justify-center">
+<span class="material-symbols-outlined">fullscreen</span>
+</button>
+</div>
+<div class="flex justify-end">
+<button class="flex items-center gap-2 border border-slate-200 dark:border-slate-800 px-4 py-2 text-[10px] md:text-xs font-bold uppercase tracking-widest hover:bg-slate-100 dark:hover:bg-slate-900 transition-colors">
+<span class="material-symbols-outlined text-sm">edit</span>
+<span class="hidden sm:inline">Editar informações</span>
+</button>
+</div>
+</div>
+<div class="lg:col-span-5 flex flex-col">
+<div class="mb-12">
+<span class="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 block mb-3">Ficha Técnica</span>
+<h1 id="itemTitle" class="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 dark:text-white leading-snug mb-5 uppercase tracking-tight">Cartaz comemorativo dos 50 anos do Laboratório Gross</h1>
+<p id="itemDescription" class="text-sm md:text-base text-slate-500 dark:text-slate-400 font-light max-w-md">O cartaz celebra os cinquenta anos de fundação do Laboratório Gross. A composição apresenta uma serpente estilizada como símbolo da medicina.</p>
+</div>
+<div class="space-y-0 border-t border-black dark:border-white">
+<div class="grid grid-cols-3 py-4 sm:py-6 border-b border-slate-100 dark:border-slate-900">
+<dt class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Título</dt>
+<dd id="metaTitulo" class="col-span-2 text-sm sm:text-base font-medium text-slate-900 dark:text-slate-100">Cartaz comemorativo dos 50 anos do Laboratório Gross</dd>
+</div>
+<div class="grid grid-cols-3 py-4 sm:py-6 border-b border-slate-100 dark:border-slate-900">
+<dt class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Autor</dt>
+<dd id="metaAutor" class="col-span-2 text-sm sm:text-base font-medium text-slate-900 dark:text-slate-100">Laboratório Gross S.A.</dd>
+</div>
+<div class="grid grid-cols-3 py-6 border-b border-slate-100 dark:border-slate-900">
+<dt class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Técnica</dt>
+<dd id="metaTecnica" class="col-span-2 text-sm font-medium text-slate-900 dark:text-slate-100">Impressão gráfica em cartaz promocional</dd>
+</div>
+<div class="grid grid-cols-3 py-6 border-b border-slate-100 dark:border-slate-900">
+<dt class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Ano</dt>
+<dd id="metaAno" class="col-span-2 text-sm font-medium text-slate-900 dark:text-slate-100">c. década de 1960</dd>
+</div>
+<div class="grid grid-cols-3 py-6 border-b border-slate-100 dark:border-slate-900">
+<dt class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Dimensões</dt>
+<dd id="metaDimensoes" class="col-span-2 text-sm font-medium text-slate-900 dark:text-slate-100">Não identificado</dd>
+</div>
+<div class="grid grid-cols-3 py-6 border-b border-slate-100 dark:border-slate-900">
+<dt class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Nº de Catálogo</dt>
+<dd id="metaCatalogo" class="col-span-2 text-sm font-mono text-slate-900 dark:text-slate-100">LG-INST-50AN-004</dd>
+</div>
+<div class="grid grid-cols-3 py-6 border-b border-slate-100 dark:border-slate-900">
+<dt class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Estado</dt>
+<dd class="col-span-2 flex items-center gap-2">
+<span class="size-1.5 bg-black dark:bg-white rounded-full"></span>
+<span id="metaEstadoText" class="text-[10px] font-bold uppercase tracking-widest">Documento histórico preservado em acervo</span>
+</dd>
+</div>
+</div>
+<div class="mt-12">
+<h3 class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-6">Notas Curatoriais</h3>
+<p id="itemNotes" class="text-sm leading-relaxed text-slate-600 dark:text-slate-400 text-justify">
+                            O cartaz celebra os cinquenta anos de fundação do Laboratório Gross. A composição apresenta uma serpente estilizada, símbolo tradicional associado à medicina e à farmacologia desde a Antiguidade. A peça integra o conjunto de materiais institucionais produzidos para reforçar a identidade da empresa e marcar momentos comemorativos de sua trajetória.
+                        </p>
+</div>
+<div id="itemTags" class="mt-12 flex flex-wrap gap-4">
+<span class="text-[10px] font-bold uppercase tracking-[0.2em] border-b border-black dark:border-white pb-1">Retrato</span>
+<span class="text-[10px] font-bold uppercase tracking-[0.2em] border-b border-black dark:border-white pb-1">Século XVII</span>
+<span class="text-[10px] font-bold uppercase tracking-[0.2em] border-b border-black dark:border-white pb-1">Barroco</span>
+</div>
+</div>
+</div>
+</main>
+<footer class="mt-12 py-12 border-t border-black text-center">
+<p class="text-black dark:text-white text-[10px] font-bold uppercase tracking-[0.4em]">acervo do laboratório GROSS 2026</p>
+</footer>
+</div>
+</div>
+
+<script>
+(function(){
+  const acervoData = [
+    {
+      id: 1,
+      label: "Cartaz comemorativo dos 50 anos do Laboratório Gross",
+      image: "50ANOSGROSS.PNG",
+      alt: "Cartaz comemorativo dos 50 anos do Laboratório Gross",
+      description: "O cartaz celebra os cinquenta anos de fundação do Laboratório Gross, apresentando uma serpente estilizada como símbolo da medicina.",
+      metadata: {
+        titulo: "Cartaz comemorativo dos 50 anos do Laboratório Gross",
+        autor: "Laboratório Gross S.A.",
+        tecnica: "Impressão gráfica em cartaz promocional",
+        ano: "c. década de 1960",
+        dimensoes: "Não identificado",
+        catalogo: "LG-INST-50AN-004",
+        estado: "Documento histórico preservado em acervo"
+      },
+      notes: "O cartaz celebra os cinquenta anos de fundação do Laboratório Gross. A composição apresenta uma serpente estilizada, símbolo tradicional associado à medicina e à farmacologia desde a Antiguidade. A peça integra o conjunto de materiais institucionais produzidos para reforçar a identidade da empresa e marcar momentos comemorativos de sua trajetória.",
+      tags: ["Cartaz comemorativo", "Década de 1960", "Institucional"]
+    },
+    {
+      id: 2,
+      label: "Anúncio do medicamento Atroveran publicado na revista Vida Médica",
+      image: "ANUNCIOATROVERAN.PNG",
+      alt: "Anúncio do medicamento Atroveran publicado na revista Vida Médica",
+      description: "Publicado na revista Vida Médica, o anúncio promove o medicamento Atroveran como tratamento para espasmos dolorosos de diversas origens fisiológicas.",
+      metadata: {
+        titulo: "Anúncio do medicamento Atroveran publicado na revista Vida Médica",
+        autor: "Laboratório Gross",
+        tecnica: "Impressão gráfica editorial",
+        ano: "c. década de 1930",
+        dimensoes: "Página de revista",
+        catalogo: "LG-PUB-ATRO-006",
+        estado: "Documento histórico preservado em acervo"
+      },
+      notes: "Publicado na revista Vida Médica, o anúncio promove o medicamento Atroveran como tratamento para espasmos dolorosos de diversas origens fisiológicas. O texto enfatiza a composição farmacológica do produto e orientações de uso, revelando a forma como laboratórios se comunicavam diretamente com médicos e profissionais da saúde.",
+      tags: ["Anúncio", "Década de 1930", "Revista médica"]
+    },
+    {
+      id: 3,
+      label: "Anúncio publicitário do medicamento Atroveran",
+      image: "ATROVERAN.PNG",
+      alt: "Anúncio publicitário do medicamento Atroveran",
+      description: "O anúncio apresenta o medicamento Atroveran em versão líquida para uso em gotas, indicado para espasmos dolorosos de origem digestiva e visceral.",
+      metadata: {
+        titulo: "Anúncio publicitário do medicamento Atroveran",
+        autor: "Laboratório Gross S.A. (Departamento de Comunicação)",
+        tecnica: "Impressão gráfica em revista médica",
+        ano: "1985",
+        dimensoes: "Não identificado (formato de página de revista)",
+        catalogo: "LG-PUB-ATRO-001",
+        estado: "Documento histórico preservado em acervo"
+      },
+      notes: "O anúncio apresenta o medicamento Atroveran em versão líquida para uso em gotas, indicado para espasmos dolorosos de origem digestiva e visceral. A peça publicitária evidencia o estilo visual característico da publicidade farmacêutica do século XX, com forte presença tipográfica e representação do produto. O material revela estratégias de comunicação científica utilizadas por laboratórios brasileiros para legitimar seus medicamentos junto ao público médico.",
+      tags: ["Anúncio farmacêutico", "Década de 1980", "Publicidade"]
+    },
+    {
+      id: 4,
+      label: "Fotografia da sede dos Laboratórios Gross no Rio de Janeiro",
+      image: "FOTOGRAFIADOLABORATORIO.PNG",
+      alt: "Fotografia da sede dos Laboratórios Gross no Rio de Janeiro",
+      description: "A fotografia registra a sede dos Laboratórios Gross no Rio de Janeiro, evidenciando a estrutura arquitetônica da empresa durante seu período de consolidação industrial.",
+      metadata: {
+        titulo: "Fotografia da sede dos Laboratórios Gross no Rio de Janeiro",
+        autor: "Autor não identificado",
+        tecnica: "Fotografia em preto e branco",
+        ano: "1963",
+        dimensoes: "Não identificado",
+        catalogo: "LG-FOT-SEDE-003",
+        estado: "Documento histórico preservado em acervo"
+      },
+      notes: "A fotografia registra a sede dos Laboratórios Gross no Rio de Janeiro, evidenciando a estrutura arquitetônica da empresa durante seu período de consolidação industrial. O edifício representa a expansão da indústria farmacêutica nacional na primeira metade do século XX. A imagem constitui importante documento visual da história institucional do laboratório.",
+      tags: ["Fotografia", "Década de 1960", "Institucional"]
+    },
+    {
+      id: 5,
+      label: "Anúncio do medicamento Phosphargyrio",
+      image: "SYPHILIS.PNG",
+      alt: "Anúncio do medicamento Phosphargyrio",
+      description: "O anúncio divulga o medicamento Phosphargyrio, indicado para tratamento da sífilis e como tônico terapêutico.",
+      metadata: {
+        titulo: "Anúncio do medicamento Phosphargyrio",
+        autor: "Laboratório Gross",
+        tecnica: "Impressão gráfica publicitária",
+        ano: "1930",
+        dimensoes: "Não identificado",
+        catalogo: "LG-PUB-PHOS-007",
+        estado: "Documento histórico preservado em acervo"
+      },
+      notes: "O anúncio divulga o medicamento Phosphargyrio, indicado para tratamento da sífilis e como tônico terapêutico. A composição gráfica utiliza tipografia marcante e linguagem direta, característica da publicidade farmacêutica do início do século XX. A peça ilustra práticas terapêuticas e estratégias de comunicação médica anteriores às atuais regulamentações sanitárias.",
+      tags: ["Anúncio", "Década de 1930", "Publicidade"]
+    },
+    {
+      id: 6,
+      label: "Anúncio publicitário do medicamento Vagostesyl",
+      image: "VAGOSTESYL.PNG",
+      alt: "Anúncio publicitário do medicamento Vagostesyl",
+      description: "A peça publicitária apresenta o medicamento Vagostesyl, indicado para distúrbios neurovegetativos e estados de tensão nervosa.",
+      metadata: {
+        titulo: "Anúncio publicitário do medicamento Vagostesyl",
+        autor: "Laboratório Gross S.A.",
+        tecnica: "Impressão gráfica publicitária",
+        ano: "c. década de 1960",
+        dimensoes: "Não identificado",
+        catalogo: "LG-PUB-VAGO-002",
+        estado: "Documento histórico preservado em acervo"
+      },
+      notes: "A peça publicitária apresenta o medicamento Vagostesyl, indicado para distúrbios neurovegetativos e estados de tensão nervosa. O anúncio utiliza elementos botânicos, representando o maracujá (Passiflora incarnata), componente da formulação do medicamento. A composição gráfica valoriza a associação entre natureza e farmacologia, recurso recorrente na publicidade de medicamentos calmantes no período.",
+      tags: ["Anúncio institucional", "Década de 1960", "Publicidade"]
+    }
+  ];
+
+  const params = new URLSearchParams(window.location.search);
+  const requestedId = Number(params.get("id")) || 1;
+  const item = acervoData.find(i => i.id === requestedId) || acervoData[0];
+
+  const setText = (id, value) => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = value;
+  };
+
+  const render = (data) => {
+    document.title = `${data.label} — Acervo Gross`;
+    setText("breadcrumbPage", data.label);
+    setText("itemTitle", data.label);
+    setText("itemDescription", data.description);
+    const img = document.getElementById("itemImage");
+    if (img) {
+      img.src = data.image;
+      img.alt = data.alt;
+    }
+    setText("metaTitulo", data.metadata.titulo);
+    setText("metaAutor", data.metadata.autor);
+    setText("metaTecnica", data.metadata.tecnica);
+    setText("metaAno", data.metadata.ano);
+    setText("metaDimensoes", data.metadata.dimensoes);
+    setText("metaCatalogo", data.metadata.catalogo);
+    setText("metaEstadoText", data.metadata.estado);
+    setText("itemNotes", data.notes);
+
+    const tagsContainer = document.getElementById("itemTags");
+    if (tagsContainer) {
+      tagsContainer.innerHTML = "";
+      data.tags.forEach(tag => {
+        const span = document.createElement("span");
+        span.className = "text-[10px] font-bold uppercase tracking-[0.2em] border-b border-black dark:border-white pb-1";
+        span.textContent = tag;
+        tagsContainer.appendChild(span);
+      });
+    }
+  };
+
+  render(item);
+})();
+</script>
+</body></html>
