@@ -24,8 +24,17 @@
     </script>
 <style type="text/tailwindcss">
         @layer base {
+            html,
+            body {
+                @apply overflow-x-hidden;
+            }
             body {
                 @apply bg-white text-black;
+            }
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
             }
         }
         .material-symbols-outlined {
